@@ -2,7 +2,7 @@
 
 [![TASS Facenet Classifier](images/facenet.jpg)](https://github.com/TASS-AI/TASS-Facenet)
 
-[![RELEASE](https://img.shields.io/badge/RELEASE-V1.0-blue.svg)](https://github.com/TASS-AI/TASS-Facenet/tree/1.0)
+[![UPCOMING RELEASE](https://img.shields.io/badge/UPCOMING%20RELEASE-0.1.1-blue.svg)](https://github.com/TASS-AI/TASS-Facenet/tree/1.1)
 
 The **TASS Facenet Classifier** uses Siamese Neural Networks and Triplet Loss to classify known and unknown faces, basically this means it calculates the distance between an image it is presented and a folder of known faces. 
 
@@ -12,7 +12,7 @@ With previous versions of TASS built using Tensorflow, **TASS Movidius Inception
 
 Combining **TASS Movidius Inception V3 Classifier** (prone to open set recognition issues) and **TASS Facenet Classifier** will allow us to catch false positives and verify positive classifications using the name/ID of that prediction to quickly index into the images and make a single calculation to determine if Inception classified the person correctly or not using Facenet and making the project more scalable. The latest Inception version of the classifier will be uploaded to this repository soon.
 
-## What Will We Do?
+# What Will We Do?
 
 1. Install the [Intel® NCSDK](https://github.com/movidius/ncsdk "Intel® NCSDK") on a Linux development device.
 2. Clone & set up the repo.
@@ -23,24 +23,24 @@ Combining **TASS Movidius Inception V3 Classifier** (prone to open set recogniti
 7. Install the [Intel® NCSDK API](https://github.com/movidius/ncsdk "Intel® NCSDK API") on a Raspberry Pi 3 / UP 2.
 8. Upload and run the program on an **UP2** or **Raspberry Pi 3**
 
-## Python Versions
+# Python Versions
 
 - Tested in Python 3.5
 
-## Software Requirements
+# Software Requirements
 
 - [Intel® NCSDK](https://github.com/movidius/ncsdk "Intel® NCSDK")
 - [Tensorflow 1.4.0](https://www.tensorflow.org/install "Tensorflow 1.4.0")
 - [iotJumpWay MQTT Client](https://github.com/iotJumpway/JumpWayMQTT "iotJumpWay MQTT Client")
 - [GrovePi](https://github.com/DexterInd/GrovePi "GrovePi") (OPTIONAL)
 
-## Hardware Requirements
+# Hardware Requirements
 
 - 1 x [Intel® Movidius](https://www.movidius.com/ "Intel® Movidius")
 - 1 x Linux Desktop for Movidius development (Full SDK)
 - 1 x Raspberry Pi 3 / UP Squared for the classifier / webcam
 
-## Optional Hardware Requirements
+# Optional Hardware Requirements
 
 - 1 x Raspberry Pi 3 for IoT connected alarm
 - 1 x Grove starter kit for IoT, Raspberry Pi edition
@@ -48,7 +48,7 @@ Combining **TASS Movidius Inception V3 Classifier** (prone to open set recogniti
 - 1 x Red LED (Grove)
 - 1 x Buzzer (Grove)
 
-## Install NCSDK On Development Device
+# Install NCSDK On Development Device
 
 ![Intel® Movidius](images/movidius.jpg)
 
@@ -69,7 +69,7 @@ Next plug your Movidius into your device and issue the following commands:
  $ make examples
 ```
 
-## Cloning The Repo
+# Cloning The Repo
 
 You will need to clone this repository to a location on your development terminal. Navigate to the directory you would like to download it to and issue the following commands.
 
@@ -77,7 +77,7 @@ You will need to clone this repository to a location on your development termina
 
 Once you have the repo, you will need to find the files in this folder located in [TASS-Facenet](https://github.com/TASS-AI/TASS-Facenet "TASS-Facenet").
 
-## Setup
+# Setup
 
 Now you need to setup the software required for the classifier to run. The setup.sh script is a shell script that you can run on both your development device and Raspberry Pi 3 / UP Squared device. 
 
@@ -103,7 +103,7 @@ If you have problems running the above program and have errors try run the follo
  $ sh setup.sh
 ```
 
-## iotJumpWay Device Connection Credentials & Settings
+# iotJumpWay Device Connection Credentials & Settings
 
 Setup an iotJumpWay Location Device for IDC Classifier, ensuring you set up a camera node, as you will need the ID of the dummy camera for the project to work. Once your create your device add the location ID and Zone ID to the **IoTJumpWay** details in the confs file located at **required/confs.json**, also add the device ID and device name exactly, add the MQTT credentials to the **IoTJumpWayMQTT** .
 
@@ -148,11 +148,11 @@ Follow the [iotJumpWay Dev Program Location Device Doc](https://www.iotjumpway.t
 }
 ```
 
-## Preparing Dataset
+# Preparing Dataset
 
 You need to set up two very small datasets. As we are using a pretrained Facenet model there is no training to do in this tutorial and we only need one image per known person. You should see the **known** and **testing** folders in the **data** directory, this is where you will store 1 image of each person you want to be identified by the network, and also a testing dataset that can include either known or unknown faces for testing. When you store the known data, you should name each image with the name you want them to be identified as in the system, in my testing I used images of me and two other random people, the 1 image used to represent myself in the known folder was named Adam  
 
-## Test TASS Facenet Classifier
+# Test TASS Facenet Classifier
 
 Now it is time to test out your classifier, on your development machine in the [TASS-Facenet](https://github.com/TASS-AI/TASS-Facenet "TASS-Facenet") directory:
 
@@ -170,7 +170,7 @@ This will run the classifier test program, the program will first loop through y
 -- MATCH Adam-2.jpg
 ```
 
-## Run TASS Facenet Classifier On WebCam
+# Run TASS Facenet Classifier On WebCam
 
 Now comes the good part, realtime facial recognition and identification. 
 
@@ -199,7 +199,7 @@ The program uses a **dlib** model to recognize faces in the frames / mark the fa
 -- Published to Device Warnings Channel
 ```
 
-## Install NCSDK On UP Squared / Raspberry Pi 3
+# Install NCSDK On UP Squared / Raspberry Pi 3
 
 ![UP2](images/UPSquared.jpg)
 
@@ -220,21 +220,21 @@ If you would like to use the IDC Classifier on the edge, this tutorial has been 
  $ python3 hello_ncs.py
 ```
 
-## Upload File Structure To UP Squared / Raspberry Pi 3
+# Upload File Structure To UP Squared / Raspberry Pi 3
 
 Now you need to upload the required files to the UP Squared / Raspberry Pi 3. Copy the **TASS-Facenet** directory from your **development machine** to your **UP Squared / Raspberry Pi 3** then navigate to the home directory of the project on your device and run the following command.  
 ```
  $ pip3 install -r requirements.txt --user
 ```
 
-## Use TASS Facenet Classifier on UP Squared / Raspberry Pi 3
+# Use TASS Facenet Classifier on UP Squared / Raspberry Pi 3
 
 You can use the **TASS Facenet Classifier** on **UP Squared** / **Raspberry Pi 3** by entering the following command in the [TASS-Facenet](https://github.com/TASS-AI/TASS-Facenet "TASS-Facenet") directory of your **UP Squared** / **Raspberry Pi 3**:
 
 ```
  $ python3.5 Classifier.py
 ```
-## Process / Stream TASS Facenet Classifier WebCam
+# Process / Stream TASS Facenet Classifier WebCam
 
 **WebCam.py** connects to a local webcam on your device or IP cam, processes the frames and sends them to a local server that is started by this same program. Be sure to edit the **ID** and **Name** values of the **Cameras** section of **required/confs.json** section using the details provided when setting up the configs, and add the URL of the IP of your device ie: http://192.168.1.200 to the **Stream** value and you can change **StreamPort** to whatever you want. These two fields will determine the address that you access your camera on, using the previous IP (Stream) and the StreamPort as 8080 the address would be **http://192.168.1.200:8080/index.html**.
 
@@ -244,7 +244,7 @@ You can process / stream a webcam using the **TASS Facenet Classifier** on **UP 
  $ python3.5 WebCam.py
 ```
 
-## Launch TASS Facenet Classifier Server
+# Launch TASS Facenet Classifier Server
 
 **Server.py** will launch a local server that will make the TASS Facenet Classifier accessible as an API endpoint on your local network. The next step is to use the provided client to send images to this API, but you can also use this for Desktop / Mobile applications and other IoT devices /  applications.
 
@@ -258,7 +258,7 @@ You can start the **TASS Facenet Classifier** on **UP Squared** / **Raspberry Pi
 
 Now leave this connection and open a new terminal session to your device.
 
-## Send Images To API 
+# Send Images To API 
 
 The final program of this project allows you to send testing images from the **data/testing/** directory to the API for classification.
 
@@ -268,16 +268,25 @@ You can start sending images to **TASS Facenet Classifier Server** on **UP Squar
  $ python3.5 Client.py
 ```
 
-## Acknowledgements
+# Acknowledgements
 
 - Uses code from Intel® **movidius/ncsdk** ([movidius/ncsdk Github](https://github.com/movidius/ncsdk "movidius/ncsdk Github"))<br />
 - Uses code from Intel® **davidsandberg/facenet** ([davidsandberg/facenet Github](https://github.com/davidsandberg/facenet "davidsandberg/facenet"))
 
-## Bugs/Issues
+# Contributing
+Please read **CONTRIBUTING.md** for details on our code of conduct, and the process for submitting pull requests to us.
 
-Please feel free to create issues for bugs and general issues you come across whilst using this or any any related iotJumpWay issues.
+# Versioning
+We use SemVer for versioning. For the versions available, see the tags on this repository.
 
-## Contributors
+# License
+This project is licensed under the **MIT License** - see the **LICENSE.md** file for details
+
+# Bugs/Issues
+
+We use issues to track bugs and general requests related to using this project.
+
+# Author
 
 [![Adam Milton-Barker: BigFinte IoT Network Engineer & Intel® Software Innovator](images/Adam-Milton-Barker.jpg)](https://github.com/AdamMiltonBarker)
 
