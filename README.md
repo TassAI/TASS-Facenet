@@ -48,7 +48,7 @@ Combining **TASS Movidius Inception V3 Classifier** (prone to open set recogniti
 
 ## Install NCSDK On Your Development Device
 
-![Intel® Movidius](images/Movidius.jpg)
+![Intel® Movidius](images/movidius.jpg)
 
 The first thing you will need to do is to install the **NCSDK** on your development device.
 
