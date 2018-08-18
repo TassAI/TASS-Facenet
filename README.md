@@ -220,7 +220,18 @@ If you would like to use the IDC Classifier on the edge, this tutorial has been 
 
 ## Upload File Structure To UP Squared / Raspberry Pi 3
 
-Now you need to upload the required files to the UP Squared / Raspberry Pi 3.  
+Now you need to upload the required files to the UP Squared / Raspberry Pi 3. Copy the **TASS-Facenet** directory from your **development machine** to your **UP Squared / Raspberry Pi 3** then navigate to the home directory of the project on your device.  
+
+## Use TASS Facenet Classifier on UP Squared / Raspberry Pi 3
+
+You can use the **TASS Facenet Classifier** on **UP Squared** / **Raspberry Pi 3** by entering the following command in the [TASS-Facenet](https://github.com/TASS-AI/TASS-Facenet "TASS-Facenet") directory of your **UP Squared** / **Raspberry Pi 3**:
+
+```
+ $ python3.5 Classifier.py
+```
+## Process / Stream TASS Facenet Classifier WebCam
+
+**WebCam.py** should connect to the local webcam on your device, process the frames and send them to a local server that is started by this same program. Be sure to edit the **ID** and **Name** values of the **Cameras** section of **required/confs.json** section using the details provided when setting up the configs, and add the URL of the IP of your device ie: http://192.168.1.200 to the **Stream** value and you can change **StreamPort** to whatever you want. These two fields will determine the address that you access your camera on, using the previous IP (Stream) and the StreamPort as 8080 the address would be **http://192.168.1.200:8080/index.html**.
 
 ## Acknowledgements
 
