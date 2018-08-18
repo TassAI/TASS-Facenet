@@ -234,12 +234,36 @@ You can use the **TASS Facenet Classifier** on **UP Squared** / **Raspberry Pi 3
 ```
 ## Process / Stream TASS Facenet Classifier WebCam
 
-**WebCam.py** should connect to the local webcam on your device, process the frames and send them to a local server that is started by this same program. Be sure to edit the **ID** and **Name** values of the **Cameras** section of **required/confs.json** section using the details provided when setting up the configs, and add the URL of the IP of your device ie: http://192.168.1.200 to the **Stream** value and you can change **StreamPort** to whatever you want. These two fields will determine the address that you access your camera on, using the previous IP (Stream) and the StreamPort as 8080 the address would be **http://192.168.1.200:8080/index.html**.
+**WebCam.py** connects to a local webcam on your device or IP cam, processes the frames and sends them to a local server that is started by this same program. Be sure to edit the **ID** and **Name** values of the **Cameras** section of **required/confs.json** section using the details provided when setting up the configs, and add the URL of the IP of your device ie: http://192.168.1.200 to the **Stream** value and you can change **StreamPort** to whatever you want. These two fields will determine the address that you access your camera on, using the previous IP (Stream) and the StreamPort as 8080 the address would be **http://192.168.1.200:8080/index.html**.
 
 You can process / stream a webcam using the **TASS Facenet Classifier** on **UP Squared** / **Raspberry Pi 3** by entering the following command in the [TASS-Facenet](https://github.com/TASS-AI/TASS-Facenet "TASS-Facenet") directory of your **UP Squared** / **Raspberry Pi 3**:
 
 ```
  $ python3.5 WebCam.py
+```
+
+## Launch TASS Facenet Classifier Server
+
+**Server.py** will launch a local server that will make the TASS Facenet Classifier accessible as an API endpoint on your local network. The next step is to use the provided client to send images to this API, but you can also use this for Desktop / Mobile applications and other IoT devices /  applications.
+
+For extra security it is also possible to add an **A record** to your web domain's DNS Zone pointing a sub domain to your public IP, then with port forwarding you can forward requests to the IP/Port of the API, combining this with services such as LetsEncrypt will allow you to send requests to your API from the outside world over an encrypted connection. 
+
+You can start the **TASS Facenet Classifier** on **UP Squared** / **Raspberry Pi 3** by entering the following command in the [TASS-Facenet](https://github.com/TASS-AI/TASS-Facenet "TASS-Facenet") directory of your **UP Squared** / **Raspberry Pi 3**:
+
+```
+ $ python3.5 Server.py
+```
+
+Now leave this connection and open a new terminal session to your device.
+
+## Send Images To API 
+
+The final program of this project allows you to send testing images from the **data/testing/** directory to the API for classification.
+
+You can start sending images to **TASS Facenet Classifier Server** on **UP Squared** / **Raspberry Pi 3** by entering the following command in the [TASS-Facenet](https://github.com/TASS-AI/TASS-Facenet "TASS-Facenet") directory of your **UP Squared** / **Raspberry Pi 3**:
+
+```
+ $ python3.5 Client.py
 ```
 
 ## Acknowledgements

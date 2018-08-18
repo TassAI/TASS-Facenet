@@ -52,7 +52,9 @@ class FacenetHelpers():
         if (total_diff < 1.3):
             # the total difference between the two is under the threshold so
             # the faces match.
-            return True
+            return "True", total_diff
+        else:
+            return "False", total_diff
 
     # create a preprocessed image from the source image that matches the
     # network expectations and return it

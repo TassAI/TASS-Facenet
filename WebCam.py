@@ -2,7 +2,7 @@
 #
 # The MIT License (MIT)
 # 
-# TASS Movidius Facenet WebCam Classifier
+# TASS Facenet WebCam Classifier
 # Copyright (C) 2018 Adam Milton-Barker (AdamMiltonBarker.com)
 # 
 # Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -23,7 +23,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 #
-# Title:         TASS Movidius Facenet WebCam Classifier
+# Title:         TASS Facenet WebCam Classifier
 # Description:   Uses the Facenet classifier to classify frames of a live feed.
 # Configuration: required/confs.json
 # Last Modified: 2018-08-17
@@ -36,7 +36,7 @@
 
 print("")
 print("")
-print("!! Welcome to TASS Movidius Facenet WebCam Classifier, please wait while the program initiates !!")
+print("!! Welcome to TASS Facenet WebCam Classifier, please wait while the program initiates !!")
 print("")
 
 import os, sys
