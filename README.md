@@ -34,7 +34,7 @@ Combining **TASS Movidius Inception V3 Classifier** (prone to open set recogniti
 
 ## Hardware Requirements
 
-![Intel® UP2 & Movidius](../images/UPSquared.jpg)
+![Intel® UP2 & Movidius](images/UPSquared.jpg)
 
 - 1 x [Intel® Movidius](https://www.movidius.com/ "Intel® Movidius")
 - 1 x Linux Desktop for Movidius development (Full SDK)
