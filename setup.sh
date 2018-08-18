@@ -7,7 +7,7 @@ echo "-- Installing requirements.txt"
 echo " "
 
 pip3 install --upgrade pip
-pip3 install -r requirements.txt
+pip3 install -r requirements.txt --user
 
 if [ ! -f "model/20170512-110547.zip" ]
 then

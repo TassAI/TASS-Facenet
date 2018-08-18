@@ -99,8 +99,6 @@ class Classifier():
 
     def loadRequirements(self):
 
-        print(self._configs["ClassifierSettings"]["NetworkPath"] + self._configs["ClassifierSettings"]["Graph"])
-
         with open(self._configs["ClassifierSettings"]["NetworkPath"] + self._configs["ClassifierSettings"]["Graph"], mode='rb') as f:
 
             self.graphfile = f.read()
