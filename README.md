@@ -220,7 +220,10 @@ If you would like to use the IDC Classifier on the edge, this tutorial has been 
 
 ## Upload File Structure To UP Squared / Raspberry Pi 3
 
-Now you need to upload the required files to the UP Squared / Raspberry Pi 3. Copy the **TASS-Facenet** directory from your **development machine** to your **UP Squared / Raspberry Pi 3** then navigate to the home directory of the project on your device.  
+Now you need to upload the required files to the UP Squared / Raspberry Pi 3. Copy the **TASS-Facenet** directory from your **development machine** to your **UP Squared / Raspberry Pi 3** then navigate to the home directory of the project on your device and run the following command.  
+```
+ $ pip3 install -r requirements.txt --user
+```
 
 ## Use TASS Facenet Classifier on UP Squared / Raspberry Pi 3
 
