@@ -2,6 +2,8 @@
 
 [![TASS Facenet Classifier](images/facenet.jpg)](https://github.com/TASS-AI/TASS-Facenet)
 
+[![RELEASE](https://img.shields.io/badge/RELEASE-V1.0-blue.svg)](https://github.com/TASS-AI/TASS-Facenet/tree/1.0)
+
 The **TASS Facenet Classifier** uses Siamese Neural Networks and Triplet Loss to classify known and unknown faces, basically this means it calculates the distance between an image it is presented and a folder of known faces. 
 
 The project uses an **UP2 (Up Squared)** (A regular Linux desktop or Raspberry 3 and above will also work) the **Intel Movidius** for inference and the [iotJumpWay](https://www.iotjumpway.tech "iotJumpWay") for IoT connectivity. 
