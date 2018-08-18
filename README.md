@@ -2,7 +2,7 @@
 
 [![TASS Facenet Classifier](images/facenet.jpg)](https://github.com/TASS-AI/TASS-Facenet)
 
-[![UPCOMING RELEASE](https://img.shields.io/badge/UPCOMING%20RELEASE-0.1.1-blue.svg)](https://github.com/TASS-AI/TASS-Facenet/tree/1.1)
+[![CURRENT RELEASE](https://img.shields.io/badge/CURRENT%20RELEASE-0.0.1-blue.svg)](https://github.com/TASS-AI/TASS-Facenet/tree/0.0.1) [![UPCOMING RELEASE](https://img.shields.io/badge/UPCOMING%20RELEASE-0.0.2-blue.svg)](https://github.com/TASS-AI/TASS-Facenet/tree/0.0.2)
 
 The **TASS Facenet Classifier** uses Siamese Neural Networks and Triplet Loss to classify known and unknown faces, basically this means it calculates the distance between an image it is presented and a folder of known faces. 
 
