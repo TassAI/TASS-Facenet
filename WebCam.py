@@ -278,7 +278,7 @@ def main():
 
 	try:
 		server = ThreadedHTTPServer((Classifier._configs["Cameras"][0]["Stream"], Classifier._configs["Cameras"][0]["StreamPort"]), CamHandler)
-		print("server started")
+		print("-- Server started on "+Classifier._configs["Cameras"][0]["Stream"]+":"+str(Classifier._configs["Cameras"][0]["StreamPort"]))
 		server.serve_forever()
 	except KeyboardInterrupt:
 		server.socket.close()

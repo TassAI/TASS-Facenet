@@ -34,8 +34,6 @@ Combining **TASS Movidius Inception V3 Classifier** (prone to open set recogniti
 
 ## Hardware Requirements
 
-![Intel® UP2 & Movidius](images/UPSquared.jpg)
-
 - 1 x [Intel® Movidius](https://www.movidius.com/ "Intel® Movidius")
 - 1 x Linux Desktop for Movidius development (Full SDK)
 - 1 x Raspberry Pi 3 / UP Squared for the classifier / webcam
@@ -49,6 +47,8 @@ Combining **TASS Movidius Inception V3 Classifier** (prone to open set recogniti
 - 1 x Buzzer (Grove)
 
 ## Install NCSDK On Your Development Device
+
+![Intel® Movidius](images/movidius.jpg)
 
 The first thing you will need to do is to install the **NCSDK** on your development device.
 
@@ -195,6 +195,27 @@ The program uses a **dlib** model to recognize faces in the frames / mark the fa
 -- MATCH
 -- Published: 30
 -- Published to Device Warnings Channel
+```
+
+## Install NCSDK On Your UP Squared / Raspberry Pi 3
+
+![UP2](images/UPSquared.jpg)
+
+If you would like to use the IDC Classifier on the edge, this tutorial has been tested on the **UP2** and the **Raspberry Pi**. You can install the **NCSDK** on your **UP Squared** / **Raspberry Pi 3** device, this will be used by the classifier to carry out inference on local images or images received via the API we will create. Make sure you have the Movidius plugged in to the edge device and follow the guide below:
+
+```
+ $ mkdir -p ~/workspace
+ $ cd ~/workspace
+ $ git clone https://github.com/movidius/ncsdk.git
+ $ cd ~/workspace/ncsdk/api/src
+ $ make
+ $ sudo make install
+```
+```
+ $ cd ~/workspace
+ $ git clone https://github.com/movidius/ncappzoo
+ $ cd ncappzoo/apps/hello_ncs_py
+ $ python3 hello_ncs.py
 ```
 
 **Acknowledgement:** Uses code from Intel® **movidius/ncsdk** ([movidius/ncsdk Github](https://github.com/movidius/ncsdk "movidius/ncsdk Github"))<br />
