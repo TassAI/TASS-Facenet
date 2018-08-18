@@ -46,7 +46,7 @@ Combining **TASS Movidius Inception V3 Classifier** (prone to open set recogniti
 - 1 x Red LED (Grove)
 - 1 x Buzzer (Grove)
 
-## Install NCSDK On Your Development Device
+## Install NCSDK On Development Device
 
 ![Intel® Movidius](images/movidius.jpg)
 
@@ -146,11 +146,11 @@ Follow the [iotJumpWay Dev Program Location Device Doc](https://www.iotjumpway.t
 }
 ```
 
-## Preparing Your Dataset
+## Preparing Dataset
 
 You need to set up two very small datasets. As we are using a pretrained Facenet model there is no training to do in this tutorial and we only need one image per known person. You should see the **known** and **testing** folders in the **data** directory, this is where you will store 1 image of each person you want to be identified by the network, and also a testing dataset that can include either known or unknown faces for testing. When you store the known data, you should name each image with the name you want them to be identified as in the system, in my testing I used images of me and two other random people, the 1 image used to represent myself in the known folder was named Adam  
 
-## Test the TASS Facenet Classifier
+## Test TASS Facenet Classifier
 
 Now it is time to test out your classifier, on your development machine in the [TASS-Facenet](https://github.com/TASS-AI/TASS-Facenet "TASS-Facenet") directory:
 
@@ -168,7 +168,7 @@ This will run the classifier test program, the program will first loop through y
 -- MATCH Adam-2.jpg
 ```
 
-## Run **TASS Facenet Classifier** on a live webcam
+## Run TASS Facenet Classifier On WebCam
 
 Now comes the good part, realtime facial recognition and identification. 
 
@@ -197,7 +197,7 @@ The program uses a **dlib** model to recognize faces in the frames / mark the fa
 -- Published to Device Warnings Channel
 ```
 
-## Install NCSDK On Your UP Squared / Raspberry Pi 3
+## Install NCSDK On UP Squared / Raspberry Pi 3
 
 ![UP2](images/UPSquared.jpg)
 
@@ -218,8 +218,14 @@ If you would like to use the IDC Classifier on the edge, this tutorial has been 
  $ python3 hello_ncs.py
 ```
 
-**Acknowledgement:** Uses code from Intel® **movidius/ncsdk** ([movidius/ncsdk Github](https://github.com/movidius/ncsdk "movidius/ncsdk Github"))<br />
-**Acknowledgement:** Uses code from Intel® **davidsandberg/facenet** ([davidsandberg/facenet Github](https://github.com/davidsandberg/facenet "davidsandberg/facenet"))
+## Upload File Structure To UP Squared / Raspberry Pi 3
+
+Now you need to upload the required files to the UP Squared / Raspberry Pi 3.  
+
+## Acknowledgements
+
+- Uses code from Intel® **movidius/ncsdk** ([movidius/ncsdk Github](https://github.com/movidius/ncsdk "movidius/ncsdk Github"))<br />
+- Uses code from Intel® **davidsandberg/facenet** ([davidsandberg/facenet Github](https://github.com/davidsandberg/facenet "davidsandberg/facenet"))
 
 ## Bugs/Issues
 
